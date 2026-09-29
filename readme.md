@@ -8,7 +8,7 @@
 
 
 
-## 🤖 Machine-Learning Potential
+## 🤖 MLP
 
 
 
