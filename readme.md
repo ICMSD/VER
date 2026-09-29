@@ -29,7 +29,7 @@ The comparison across these states allows us to examine the evolution of VER wit
 > [!IMPORTANT]
 > The machine-learning potential provided in this repository was developed for the HF/CH₃CN system and validated for the thermodynamic states investigated in this work. Its transferability to other compositions, temperatures, or pressure ranges has not been established.
 
-## ⚙️ Simulation
+## ⚙️ Simulation Workflow
 
 > [!WARNING]
 > VER simulations require extensive nonequilibrium trajectory sampling to obtain converged relaxation dynamics. GPU acceleration is recommended for production calculations.
