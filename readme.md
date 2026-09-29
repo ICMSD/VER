@@ -1,4 +1,4 @@
-# ⚛️ Pressure-Dependent Vibrational Energy Relaxation of HF in Acetonitrile
+# Pressure-Dependent Vibrational Energy Relaxation of HF in Acetonitrile
 
 ## 🔬 Overview
 
