@@ -26,7 +26,7 @@ thermo          100
 thermo_style    custom step pe ke etotal temp press
 
 # Initialize velocities if no initial velocity distribution is provided
-velocity all create 300.0 12345 mom yes rot yes dist gaussian
+velocity all create 298.15 12345 mom yes rot yes dist gaussian
 
 # Output trajectory
 dump            traj all custom 20 traj.lammpstrj id type x y z vx vy vz fx fy fz
