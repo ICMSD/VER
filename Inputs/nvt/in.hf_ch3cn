@@ -20,7 +20,7 @@ pair_coeff      * *  F H C N
 neighbor        2.0 bin
 neigh_modify    delay 0 every 1 check yes
 
-timestep        0.0003    # 0.0003 ps = 0.3 fs
+timestep        0.001    # 0.001 ps = 1.0 fs
 
 thermo          100
 thermo_style    custom step pe ke etotal temp press
