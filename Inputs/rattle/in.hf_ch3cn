@@ -34,7 +34,7 @@ mass 4 14.0067   # N → Nitrogen
 bond_coeff      2  0.0 1.1025    # CH3: bond type 2
 
 
-# ---------------- Pair Potential (DeepMD) ----------------
+# ---------------- Pair Potential ----------------
 pair_style      deepmd frozen-model.pth  # DeepMD model
 pair_coeff      * *  F H C N  # Map LAMMPS atom types to element names
 
