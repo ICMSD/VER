@@ -34,7 +34,7 @@ dump_modify     traj sort id
 
 # ---------- NVT ----------
 fix             1 all nvt temp 298.15 298.15 0.1
-run             200000
+run             100000
 
 # Save the final configuration as restart and data files
 write_restart   lmp.restart
