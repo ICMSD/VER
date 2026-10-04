@@ -1,0 +1,41 @@
+# LAMMPS input for DeepMD potential MD
+
+units           metal
+dimension       3
+boundary        p p p
+atom_style      atomic
+
+read_data       data-template.lmp
+
+# Atomic masses (amu)
+mass 1 18.9984   # F
+mass 2 1.0079    # H
+mass 3 12.0107   # C
+mass 4 14.0067   # N
+
+# DeepMD potential
+pair_style      deepmd frozen-model.pth
+pair_coeff      * *  F H C N
+
+neighbor        2.0 bin
+neigh_modify    delay 0 every 1 check yes
+
+timestep        0.0003    # 0.0003 ps = 0.3 fs
+
+thermo          100
+thermo_style    custom step pe ke etotal temp press
+
+# Initialize velocities if no initial velocity distribution is provided
+velocity all create 300.0 12345 mom yes rot yes dist gaussian
+
+# Output trajectory
+dump            traj all custom 20 traj.lammpstrj id type x y z vx vy vz fx fy fz
+dump_modify     traj sort id
+
+# ---------- NVT ----------
+fix             1 all nvt temp 298.15 298.15 0.1
+run             200000
+
+# Save the final configuration as restart and data files
+write_restart   lmp.restart
+write_data      lmp.data
